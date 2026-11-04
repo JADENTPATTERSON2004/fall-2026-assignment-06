@@ -4,6 +4,7 @@ import { Article } from '../types';
 import { getArticle, deleteArticle } from '../api';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { ErrorMessage } from '../components/ErrorMessage';
+import { CommentsSection } from '../components/CommentsSection';
 
 export const ArticleDetailPage: React.FC = () => {
   const { articleId } = useParams<{ articleId: string }>();
@@ -123,13 +124,8 @@ export const ArticleDetailPage: React.FC = () => {
         </div>
       </article>
 
-      {/* Comments Section placeholder - will be populated in Part 2 */}
-      <section className="comments-section" id="comments">
-        <div className="comments-placeholder">
-          <h2 className="comments-title">Comments</h2>
-          <p className="text-muted">Comments feature will load here.</p>
-        </div>
-      </section>
+      {/* Comments Section */}
+      <CommentsSection articleId={article.articleId} />
     </main>
   );
 };
