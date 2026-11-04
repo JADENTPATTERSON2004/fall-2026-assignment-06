@@ -7,7 +7,7 @@ export const Navbar: React.FC = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-brand">
           <span className="brand-icon">📰</span>
-          <span className="brand-title">Articles & Comments</span>
+          <span className="brand-title">The Daily Article</span>
         </Link>
         <nav className="navbar-links">
           <NavLink
